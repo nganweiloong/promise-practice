@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"
+        defer></script>
+    <div class="mb-5 d-flex justify-content-center mt-5"><button class="btn btn-primary cook">Cook!</button><button
+            class="btn btn-secondary clear">Clear</button></div>
+    <div class="info"> </div>
+    <script>const createStep = e => { document.querySelector(".info").innerHTML += `<div class="alert alert-info" role="alert"> ${e}</div>` }; document.querySelector(".clear").addEventListener("click", () => { console.log("hi"), document.querySelector(".info").textContent = "" }); const cookMaggiStep = ["After 1 sec~~ Bring 2\xbd cups of water to a boil in a small saucepan. Add the noodles and cook for 2 minutes. Add the flavor packet, stir, and continue to cook for another 30 seconds.", "After 2 sec~~ Remove the pan from the heat and carefully add the egg. Do not stir; pull the noodles over the egg and let sit for one minute to poach.", "After 3 sec~~ Carefully transfer everything to a serving bowl, add the butter, cheese and sesame seeds and mix. Garnish with the scallions if desired.",]; function cookMaggi() { setTimeout(() => { createStep("Order received!!!!!"), setTimeout(() => { createStep(cookMaggiStep[0]), setTimeout(() => { createStep(cookMaggiStep[1]), setTimeout(() => { createStep(cookMaggiStep[2]) }, 3e3) }, 2e3) }, 1e3) }, 0) } document.querySelector(".cook").addEventListener("click", cookMaggi); </script>
+    <a href="/index.html"> <button class="btn btn-primary">Go Back to Your page</button></a>
+</body>
+</body>
+
+</html>
